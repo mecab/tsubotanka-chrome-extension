@@ -1,0 +1,14 @@
+{
+  "appName": {
+    "message": "坪単価計算",
+    "description": "The name of the application"
+  },
+  "appShortName": {
+    "message": "tsubotanka",
+    "description": "The short_name (maximum of 12 characters recommended) is a short version of the app's name."
+  },
+  "appDescription": {
+    "message": "金額と面積を含むテキストを選択すると、坪単価と平米単価を計算して表示します。右クリックメニューから利用できます。",
+    "description": "The description of the application"
+  }
+}

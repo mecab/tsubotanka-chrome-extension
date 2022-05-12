@@ -1,0 +1,30 @@
+#tsubotanka_canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999999;
+    pointer-events: none;
+    font-size: 1.2em;
+}
+
+#tsubotanka_canvas .tooltip {
+    position: absolute;
+    padding: 0.5em;
+    background: white;
+    border: 1px solid #000;
+
+    color: rgb(200, 0, 0);
+    font-weight: bold;
+
+    transform: translate(-100%, -100%);
+}
+
+#tsubotanka_canvas .tooltip p {
+    margin-bottom: 0.5em;
+}
+
+#tsubotanka_canvas .tooltip p:last-child {
+    margin-bottom: 0;
+}

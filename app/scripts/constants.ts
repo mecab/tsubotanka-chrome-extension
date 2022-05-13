@@ -1,4 +1,5 @@
 export const CONTEXT_MENU_ID = 'tsubotanka_contextmenu';
+export const INJECTION_MARKER = '__tsubotanka_injected__';
 
 export const EV_TRIGGER_TSUBO_CALCULATION = 'triggerTsubotankaCalculation';
 export const M2_TO_TSUBO = 0.3205;

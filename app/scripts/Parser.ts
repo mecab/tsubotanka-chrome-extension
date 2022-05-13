@@ -59,7 +59,7 @@ export class Parser {
             this._m2 = m2;
         }
 
-        console.log('parsed: ', value, m2);
+        console.log(`parsed: value: ${this.value}, area: ${this.m2} (${this.tsubo})`);
     }
 
     private parseValue(text: string): number | undefined {
@@ -69,7 +69,6 @@ export class Parser {
         }
 
         const okuString = match.includes('億') ? match.split('億')[0]! : '0';
-        console.log(okuString);
         const okuNumber = parseInt(okuString.match(/[0-9]/g)!.join(''), 10);
 
         const underOkuText = match.includes('億') ? match.split('億')[1]! : match;

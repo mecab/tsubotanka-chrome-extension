@@ -17,20 +17,5 @@
   "__firefox__background": {
     "scripts": ["scripts/background.js"]
   },
-  "permissions": ["contextMenus", "activeTab"],
-  "content_scripts": [
-    {
-      "matches": [
-        "<all_urls>"
-      ],
-      "css": [
-        "styles/contentscript.css"
-      ],
-      "js": [
-        "scripts/contentscript.js"
-      ],
-      "run_at": "document_end",
-      "all_frames": false
-    }
-  ]
+  "permissions": ["contextMenus", "scripting", "activeTab"]
 }

@@ -39,6 +39,14 @@ describe('Parser', function() {
         expect(parser.tsubo).toBe(100 * M2_TO_TSUBO);
     });
 
+    it('parses area in 平米', async function() {
+        const parser = new Parser();
+        parser.parse('100平米');
+        
+        expect(parser.m2).toBe(100);
+        expect(parser.tsubo).toBe(100 * M2_TO_TSUBO);
+    });
+
     it('parses area in 坪', async function() {
         const parser = new Parser();
         parser.parse('100坪');

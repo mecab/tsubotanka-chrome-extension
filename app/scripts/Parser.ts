@@ -1,7 +1,7 @@
 import { M2_TO_TSUBO, TSUBO_TO_M2 } from "./constants";
 
 const VALUE_REGEXP = /(([0-9]+[,\s]?)*[0-9]\s*億)?([0-9]+[,\s]?)*[0-9]\s*万?円+/g;
-const AREA_REGEXP = /([0-9]+[,\s]?)*[0-9]\s*(.[0-9\s]+)?\s*(坪|m2|m²)+/g;
+const AREA_REGEXP = /([0-9]+[,\s]?)*[0-9]\s*(.[0-9\s]+)?\s*(坪|平米|m2|m²)+/g;
 
 export class Parser {
     private _m2?: number = undefined;
@@ -84,7 +84,15 @@ export class Parser {
             return undefined;
         }
 
-        const areaNumber = parseFloat(match.replace('m²', '').replace('m2', '').replace('坪', '').match(/[0-9.]/g)!.join(''));
+        const areaNumber = parseFloat(
+            match
+                .replace('m²', '')
+                .replace('m2', '')
+                .replace('平米', '')
+                .replace('坪', '')
+                .match(/[0-9.]/g)!
+                .join('')
+        );
         const base = match.includes('坪') ? TSUBO_TO_M2 : 1;
         
         return areaNumber * base;

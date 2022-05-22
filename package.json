@@ -1,6 +1,6 @@
 {
   "name": "tsubotanka",
-  "version": "0.9.0",
+  "version": "0.9.1",
   "description": "Show price per tsubo value in supported real estate websites",
   "scripts": {
     "test": "jest",

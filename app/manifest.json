@@ -17,5 +17,6 @@
   "__firefox__background": {
     "scripts": ["scripts/background.js"]
   },
-  "permissions": ["contextMenus", "scripting", "activeTab"]
+  "permissions": ["contextMenus", "scripting", "activeTab"],
+  "__firefox__permissions": ["contextMenus", "activeTab"]
 }
